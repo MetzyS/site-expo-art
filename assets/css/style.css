@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+:root {
+    --primary-color: #082531;
+    --primary-color-light: rgba(8, 37, 49, 0.1);
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -98,7 +103,7 @@ body {
 
 .nav-logo {
     display: block;
-    background: url('../imgs/icons/pied-piper.svg');
+    background: center/contain no-repeat url('../imgs/icons/LogoMetzys.svg');
     cursor: pointer;
     width: 35px;
     height: 35px;
@@ -132,7 +137,7 @@ body {
 
 .btn-reservation {
     align-items: center;
-    background-color: darkslategray;
+    background-color: var(--primary-color);
     border-color: transparent;
     border-radius: 10px;
     color: white;
@@ -171,8 +176,20 @@ body {
     padding-top: 0.75rem;
     padding-left: 1rem;
     padding-bottom: 0.625rem;
-    text-decoration: unset;
+    text-decoration: none;
+    color: var(--primary-color);
     text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.nav-list__item:hover,
+.nav-list__item:focus {
+    color: white;
+    background-color: slategray;
+}
+
+.nav-list__item:active {
+    transform: scale(0.95);
 }
 
 /*Infos Header*/
@@ -307,4 +324,82 @@ body {
         }
     }
 
+}
+
+/*Section bio*/
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.bio-title {
+    font-size: 28px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.btns-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.btn {
+    border: 1px solid var(--primary-color);
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-portfolio {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-portfolio:hover,
+.btn-contact:hover {
+    background-color: var(--primary-color-light);
+}
+
+.btn-portfolio:active,
+.btn-contact:active {
+    transform: scale(0.95);
+}
+
+.btn-contact {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-contact:hover {
+    color: var(--primary-color);
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .btns-container {
+        flex-direction: unset;
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .btn {
+        width: 165px;
+        margin-top: 50px;
+    }
 }
