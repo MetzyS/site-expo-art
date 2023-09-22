@@ -1,3 +1,4 @@
+let body = document.querySelector('body');
 let btnMenu = document.querySelector('.menu-btn');
 let sidebar = document.querySelector('.sidebar');
 let headerBg = document.querySelector('.header-background');
@@ -39,6 +40,36 @@ for (let i = 0; i < navListItem.length; i++) {
     })
 }
 
-// Template de la modale de contact
+// Template de la modal de contact
+// let contactModal = document.createElement('div');
+// contactModal.classList.add('modal');
 
-let contactModal = ``;
+// contactModal.innerHTML = `
+//     <div class="contact-form">
+//         <form action="">
+//         <fieldset>
+//             <legend><span>Formulaire de contact</span><span class="btn-close-form">x</span></legend>    
+//                 <div class="input-container">
+//                     <label for="nom">Nom</label>    
+//                     <input type="text" class="form-input">
+//                 </div>
+            
+//                 <div class="input-container">
+//                     <label for="email">Email</label>    
+//                     <input type="email" class="form-input">
+//                 </div>
+
+//                 <div class="input-container">
+//                     <label for="message"></label>
+//                     <textarea name="message" id="message" cols="5" rows="10"></textarea>
+//                 </div>
+
+//             </fieldset>
+//         </form>
+//     </div>
+// `;
+
+
+// btnContact.addEventListener('click', () => {
+//     body.append(contactModal);
+// })
